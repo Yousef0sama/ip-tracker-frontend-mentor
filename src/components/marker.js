@@ -1,3 +1,4 @@
+"use client"
 
 import {useMap, Marker, Popup} from 'react-leaflet'
 
