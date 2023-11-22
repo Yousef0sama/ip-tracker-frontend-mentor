@@ -181,17 +181,17 @@ export default function Home() {
 
         <div className="col-12 mapSec">
 
-          <MapContainer
-            center={position}
-            zoom={14}
-            scrollWheelZoom={true}
-          >
-            <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            <MarkerPos pos={position} ></MarkerPos>
-          </MapContainer>
+          // <MapContainer
+          //   center={position}
+          //   zoom={14}
+          //   scrollWheelZoom={true}
+          // >
+          //   <TileLayer
+          //     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          //     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          //   />
+          //   <MarkerPos pos={position} ></MarkerPos>
+          // </MapContainer>
 
         </div>
 
