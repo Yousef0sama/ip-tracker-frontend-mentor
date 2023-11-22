@@ -90,112 +90,112 @@ export default function Home() {
 
     <div className="container-fluid">
       <div className="row">
-      {/* form sec start */}
+        {/* form sec start */}
 
-        <div className="col-12 formSec">
-          <div className="background">
-            <h3>IP Address Tracker</h3>
-            <div className="form">
-              <form action="">
-                <input type="text" placeholder="Search for any IP address or domain" onChange={(e) => {setSearch(e.target.value)}} />
-                <button type="button" onClick={SetIp}><img src="./images/icon-arrow.svg" alt=">"/></button>
-              </form>
-            </div>
-            <div className="row info">
-
-              <div className="col-md-3 col-12 row frst">
-                <div className="col-12">
-                  <span className="header">IP ADDRESS</span>
-                </div>
-                <div className="col-12">
-                  <span className="info">
-                    {
-                      searching ? 
-                      <span className="loading"></span>
-                      :
-                      data.ip
-                    }
-                  </span>
-                </div>
+          <div className="col-12 formSec">
+            <div className="background">
+              <h3>IP Address Tracker</h3>
+              <div className="form">
+                <form action="">
+                  <input type="text" placeholder="Search for any IP address or domain" onChange={(e) => {setSearch(e.target.value)}} />
+                  <button type="button" onClick={SetIp}><img src="./images/icon-arrow.svg" alt=">"/></button>
+                </form>
               </div>
+              <div className="row info">
 
-              <div className="col-md-3 col-12 row">
-                <div className="col-12">
-                  <span className="header">LOCATION</span>
+                <div className="col-md-3 col-12 row frst">
+                  <div className="col-12">
+                    <span className="header">IP ADDRESS</span>
+                  </div>
+                  <div className="col-12">
+                    <span className="info">
+                      {
+                        searching ? 
+                        <span className="loading"></span>
+                        :
+                        data.ip
+                      }
+                    </span>
+                  </div>
                 </div>
-                <div className="col-12">
-                  <span className="info">
-                    {
-                      searching ?
-                      <span className="loading"></span>
-                      :
-                      <>
-                        {data.location.counrty && data.location.counrty + ", "}
-                        {data.location.region && data.location.region + ", "}
-                        {data.location.city}
-                      </>
-                    }
-                  </span>
+
+                <div className="col-md-3 col-12 row">
+                  <div className="col-12">
+                    <span className="header">LOCATION</span>
+                  </div>
+                  <div className="col-12">
+                    <span className="info">
+                      {
+                        searching ?
+                        <span className="loading"></span>
+                        :
+                        <>
+                          {data.location.counrty && data.location.counrty + ", "}
+                          {data.location.region && data.location.region + ", "}
+                          {data.location.city}
+                        </>
+                      }
+                    </span>
+                  </div>
                 </div>
+
+                <div className="col-md-3 col-12 row">
+                  <div className="col-12">
+                    <span className="header">TIMEZONE</span>
+                  </div>
+                  <div className="col-12">
+                    <span className="info">
+                      {
+                        searching ?
+                        <span className="loading"></span>
+                        :
+                        data.timeZone
+                      }
+                    </span>
+                  </div>
+                </div>
+
+                <div className="col-md-3 col-12 row">
+                  <div className="col-12">
+                    <span className="header">ISP</span>
+                  </div>
+                  <div className="col-12">
+                    <span className="info">
+                      {
+                        searching ?
+                        <span className="loading"></span>
+                        :
+                        data.ISP
+                      }
+                    </span>
+                  </div>
+                </div>
+
               </div>
-
-              <div className="col-md-3 col-12 row">
-                <div className="col-12">
-                  <span className="header">TIMEZONE</span>
-                </div>
-                <div className="col-12">
-                  <span className="info">
-                    {
-                      searching ?
-                      <span className="loading"></span>
-                      :
-                      data.timeZone
-                    }
-                  </span>
-                </div>
-              </div>
-
-              <div className="col-md-3 col-12 row">
-                <div className="col-12">
-                  <span className="header">ISP</span>
-                </div>
-                <div className="col-12">
-                  <span className="info">
-                    {
-                      searching ?
-                      <span className="loading"></span>
-                      :
-                      data.ISP
-                    }
-                  </span>
-                </div>
-              </div>
-
             </div>
           </div>
-        </div>
 
-      {/* form sec end */}
+        {/* form sec end */}
 
-      {/* map sec start */}
+        {/* map sec start */}
 
-        <div className="col-12 mapSec">
+          {/* <div className="col-12 mapSec">
 
-          <MapContainer
-            center={position}
-            zoom={14}
-            scrollWheelZoom={true}
-          >
-            <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            <MarkerPos pos={position} ></MarkerPos>
-          </MapContainer>
+            <MapContainer
+              center={position}
+              zoom={14}
+              scrollWheelZoom={true}
+            >
+              <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              />
+              <MarkerPos pos={position} ></MarkerPos>
+            </MapContainer>
 
-        </div>
+          </div> */}
 
-      {/* map sec end */}
+        {/* map sec end */}
       </div>
     </div>
   )
